@@ -18,21 +18,28 @@ scanf("%lf %c %lf",&num1,&ope,&num2);
 switch(ope)
 {
 case '+':
+    printf("=%lf",num1+num2);
     break;
 case '-':
+    printf("=%lf",num1-num2);
     break;
 case '*':
+    printf("=%lf",num1*num2);
     break;
 case '/':
     if (num2==0)
         printf("\n\n除数不能为零！");
+    else
+        printf("=%lf",num1/num2);
     break;
 case '%':
     if (num2==0)
         printf("\n\n除数不能为零！");
+    else
+        printf("=%ld",(long)num1 % (long)num2);
     break;
 default:
-    printf("\n\n无效的操作符合！");
+    printf("\n\n无效的操作符号！");
 }
     return 0;
 }
