@@ -12,6 +12,27 @@ char ope=0; /* 运算符 必须是 + - * / */
 /* 赋值-输入*/
 printf("\n 这是一个四则运算的计算器，请输入计算表达式：\n");
 scanf("%lf %c %lf",&num1,&ope,&num2);
-printf("x1=%lf,ope=%c,x2=%lf,",num1,ope,num2);
+//printf("x1=%lf,ope=%c,x2=%lf,",num1,ope,num2);
+
+/* 检查输入有效性*/
+switch(ope)
+{
+case '+':
+    break;
+case '-':
+    break;
+case '*':
+    break;
+case '/':
+    if (num2==0)
+        printf("\n\n除数不能为零！");
+    break;
+case '%':
+    if (num2==0)
+        printf("\n\n除数不能为零！");
+    break;
+default:
+    printf("\n\n无效的操作符合！");
+}
     return 0;
 }
